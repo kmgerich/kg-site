@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pinstripe Theme and Mozilla 1.3</title>
+		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
+		<meta name="generator" content="Eleventy v3.0.0">
+		
+		<link rel="stylesheet" href="/dist/K9hp71GZ-9.css">
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Kevin Makes Stuff</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/archive/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<h1 id="pinstripe-theme-and-mozilla-1-3">Pinstripe Theme and Mozilla 1.3</h1>
+			
+<p>Pinstripe will not install on Mozilla 1.3 final. From the Mozilla 1.3 <a href="http://www.mozilla.org/releases/mozilla1.3/">release notes</a>: “On Mac OS X, XPInstall has been disabled for 1.3. This means that extensions and themes will not install for Mozilla 1.3 on Mac OS X. (bug <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=196959" title="Browser draws gray instead of toolbars if new window is opened with focus in an outliner">196959</a>)”.</p>
+<p><strong>Update</strong> (April 22, 2003): <a href="http://www.mozillazine.org/articles/article3101.html">Mozilla 1.3.1 builds</a> have been released which fixes the software installation mechanism on OS X!</p>
+<h2 id="comments">Comments</h2>
+<p><strong>fred</strong> on 2003-03-13 17:10:17</p>
+<blockquote>
+<p>Well, I can verify it doesn't work on 1.3 Final. What in the heck is up with that?? :(</p>
+</blockquote>
+<p><strong>Shylock</strong> on 2003-03-13 17:16:06</p>
+<blockquote>
+<p>I just installed Mozilla 1.3 over 1.3 beta. I am able to switch from the pinball to the pinstripes theme without any problem. (Pinstripes was already installed prior to updating to Mozilla 1.3 final).</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-03-13 18:37:25</p>
+<blockquote>
+<p>Apparently the software installation mechanism (which includes theme installation) is broken in 1.3 final so the Mozilla developers decided to turn the feature off for this release. Let's hope they come out with a 1.3.1 release quickly to correct the problem.</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-03-13 18:50:52</p>
+<blockquote>
+<p>A workaround would be to do what Shylock did and install Pinstripe under an old version of Mozilla then upgrade to 1.3.</p>
+</blockquote>
+<p><strong>Demolition</strong> on 2003-03-14 02:26:23</p>
+<blockquote>
+<p>Like Shylock, I also installed Mozilla 1.3 Final over Mozilla 1.3 Beta, but it still started up with the Modern theme.  Looks like I'm stuck with it since the Classic theme has problems according to the release notes.  Oh well.</p>
+<p>D.</p>
+</blockquote>
+<p><strong>Shylock</strong> on 2003-03-14 05:38:39</p>
+<blockquote>
+<p>Demolition: Perhaps I succeeded in using the Pinstripe theme because Pinball was my active theme prior to installing Mozilla 1.3 Final.</p>
+</blockquote>
+<p><strong>Rifton</strong> on 2003-03-14 10:51:13</p>
+<blockquote>
+<p>This is such bad news (for now). I can't use Mozilla with out Pinstrip installed bacause all the other themes are way to ugly. Pinstrip is the best theme Mozilla has, I'll miss it for now.</p>
+</blockquote>
+<p><strong>Crispin</strong> on 2003-03-14 14:04:34</p>
+<blockquote>
+<p>The other option is to download one of the new nightly builds and use them. I am using Pinstripe with Build 2003031103 Mozilla 1.4a and it works great.</p>
+</blockquote>
+<p><strong>Jesse</strong> on 2003-03-14 15:10:49</p>
+<blockquote>
+<p>Seems like there ought to be a better workaround: can't we just download the pinstripe .jar file (or whatever it is) and install it manually?  Or are there too many things to change for this to be practical?</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-03-14 16:28:29</p>
+<blockquote>
+<p>This is just crazy enough it might work. To manually install Pinstripe first close Mozilla then:</p>
+<ol>
+<li>
+<p>Download pinstripe.jar and copy it to your ~/Library/Mozilla/[profile name]/[random string].slt/chrome folder.</p>
+</li>
+<li>
+<p>In that same folder, open the CHROME.RDF file in a text editor. BACKUP this file before you modify it!</p>
+</li>
+<li>
+<p>Copy the code below to a text editor.</p>
+</li>
+<li>
+<p>It is IMPORTANT that you change the bits that are in brackets to reference your own user name, profile name, and randomly named slt folder.</p>
+</li>
+<li>
+<p>Copy the modified text and paste it just before the last line of the chrome.rdf file and save the file.</p>
+</li>
+<li>
+<p>Open Mozilla and you should have Pinstripe in your theme list and be able to switch to it.</p>
+</li>
+</ol>
+<p>Let me know if this works. I did it on my machine but I'm not positive it'll work on yours.</p>
+<p><a href="http://kmgerich.com/archive/chromebits.txt" rel="nofollow ugc">Download Code snippet here</a></p>
+</blockquote>
+<p><strong>Xian</strong> on 2003-03-14 17:41:45</p>
+<blockquote>
+<p>Even crazier than that. I just downloaded the <a href="http://ftp.mozilla.org/pub/mozilla/nightly/latest/mozilla-mac-MachO.dmg.gz" rel="nofollow ugc">Latest nightly build</a> instead of the &quot;official&quot; 1.3. And downloading/installing themes works correctly.</p>
+<p>Hopefully that fixes it for all of you.</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-03-14 19:44:51</p>
+<blockquote>
+<p>But that's no fun. You didn't edit a single config file by hand!</p>
+<p>Seriously though, the recent nightly builds will install Pinstripe but are probably more unstable than the 1.3 release. YMMV.</p>
+</blockquote>
+<p><strong>Michael Adams</strong> on 2003-03-15 08:22:05</p>
+<blockquote>
+<p>Thanks kevin, the manual technique you described works just fine on my moz1.3 final; no problems at all!</p>
+</blockquote>
+<p><strong>Dan</strong> on 2003-03-15 12:32:16</p>
+<blockquote>
+<p>Thank you, Kevin! It worked just fine for me, all I had to do was switch the theme in the menu and restart again. You saved me from having to use Camino .7 (which doesn't work with some of my favorite sites) as my default browser.</p>
+</blockquote>
+<p><strong>Yuri</strong> on 2003-03-20 16:11:22</p>
+<blockquote>
+<p>Thanks Kev. This theme is really what I was looking for. It also has the potential to get better. I got the 1.3 version of Mozilla and with the technique you described before (editing the chrome.rdf), this is working just fine.</p>
+</blockquote>
+<p><strong>Jason</strong> on 2003-03-21 02:43:34</p>
+<blockquote>
+<p>Hi Kevin,
+Anyone have any problems using the manual method above? I edited the chrome.rdf file following the instructions but I just end up with a blank browser window. No widgets etc. I added my own info (using search and replace) and eyeballed it and it looks fine to me (verified paths etc). Tried several times with the same results. Anyone have any ideas as to why this might not be working?
+Thanks</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-03-21 05:26:21</p>
+<blockquote>
+<p>Jason, it's important to replace the text in brackets (like [profile name] and [your user name]) with the the info on your particular machine so Mozilla will know where to find Pinstripe. Go double check that you didn't spell anything wrong. It's also important that the pinstripe.jar file is in your Mozilla chrome folder. Doublecheck that the file is in the right place. By the way these instructions will work only for Pinstripe Blue, not Graphite.</p>
+</blockquote>
+<p><strong>Jason</strong> on 2003-03-21 17:57:11</p>
+<blockquote>
+<p>Yes! Thanks for the reply Kevin. I had pretty much given up since I felt confident I had edited the file properly but decided to give it one more go after reading your reply. On a whim I downloaed the .jar file again and sure enough my old one was apparently corrupted. It's file size was less than 300k. I replaced the bad .jar with the freshly downloaded and voila! Thanks again Kevin for making the best looking/functional Mozilla theme hands down.</p>
+</blockquote>
+<p><strong>Mike</strong> on 2003-03-23 17:05:00</p>
+<blockquote>
+<p>I can confirm that pinstripe works on Mozilla 1.3, Nightly build id 2003032309.</p>
+<p>Just installed it.</p>
+</blockquote>
+<p><strong>John</strong> on 2003-03-26 19:43:30</p>
+<blockquote>
+<p>Thanks Kevin! The manual method worked fine with Pinstripe Graphite. (Mac OS X 10.2.4, Moz 1.3f). I simply renamed pinstripe_graphite.jar to pinstripe.jar.</p>
+</blockquote>
+<p><strong>Demolition</strong> on 2003-04-01 04:06:24</p>
+<blockquote>
+<p>Kevin,</p>
+<p>Finally got around to trying your manual Pinstripe install method.  Works like a charm.  Thanks, man!</p>
+<p>D.</p>
+<p>p.s. Happy April Fools' Day, y'all.  ;-)</p>
+</blockquote>
+<p><strong>Bill</strong> on 2003-05-28 08:36:40</p>
+<blockquote>
+<p>Pinstripe seems to be broken in OS 10.2.6.  The Personal Toolbar no longer is visible.  As you toggle the view on/off, a thick line appears/disappears, but no toolbar.  Happened on both my desktop and PB as soon as I upgraded to 10.2.6.</p>
+<p>I am running a different theme for OS X.  I haven't tried going back to default Aqua to see if that brings back the toolbar.</p>
+</blockquote>
+<p><strong>whois</strong> on 2003-08-22 21:36:24</p>
+<blockquote>
+<p>Interesting. My previous post is missing.</p>
+</blockquote>
+
+
+		</main>
+
+		<footer>
+			<p>© 2025</p>
+		</footer>
+
+		<!-- This page `/posts/2003/03/13/pinstripe-theme-and-mozilla-13/` was built on 2025-05-26T18:39:57.798Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

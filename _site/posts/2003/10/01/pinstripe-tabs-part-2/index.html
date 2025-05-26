@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pinstripe Tabs, part 2</title>
+		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
+		<meta name="generator" content="Eleventy v3.0.0">
+		
+		<link rel="stylesheet" href="/dist/K9hp71GZ-9.css">
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Kevin Makes Stuff</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/archive/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<h1 id="pinstripe-tabs-part-2">Pinstripe Tabs, part 2</h1>
+			
+<p>This is in response to <a href="http://kmgerich.com/archive/000026.html">Bill McGonigle’s comment</a> about Pinstripe’s tabs.</p>
+<p>Bill says: “I think of Pinstripe as truely Aqua-consistent theme for Mozilla. I place consistency one tiny notch above optimal functionality on the Mac, so I would advocate emulating Jaguar’s tab look and feel.”</p>
+<p>Pinstripe aims for Aqua-compliance, but it misses the mark somewhat. And where it misses, it’s due to the limitations of Mozilla’s cross-platform UI…</p>
+<p>… For instance, menus and toolbar icons do not take on the Graphite appearance when you choose the Graphite theme. And the menu items don’t flash when you click on them as they would in a native Mac OS X application. That being said, I agree that consistency is a desirable thing – but browser tabs are a special case. They differ from normal tab controls in these ways:</p>
+<ul>
+<li>You can create and destroy browser tabs. Normal tab controls are static.</li>
+<li>You can drag things to the tab bar to open a new browser tab.</li>
+<li>You can right-click on a browser tab and get a context menu. Normal tabs don’t have context menus.</li>
+<li>You can double-click on the tab bar to open a new browser tab (in Firebird).</li>
+<li>You can middle-click (in certain cases) to close a browser tab.</li>
+</ul>
+<p>All these behaviors add up to a unique widget for viewing documents. I don’t agree that the best way to render these tabs is to draw them as if they were standard Aqua tabs. In fact it is probably contrary to the spirit of the <a href="http://developer.apple.com/documentation/UserExperience/Conceptual/AquaHIGuidelines/AHIGDock/index.html">Aqua User Interface Guidelines</a> to use the look of a system control.</p>
+<p>There’s also another consistency snafu. In Panther, which will be released shortly, the browser tabs which are drawn by the Appearance Manager will be drawn as standard Jaguar tab controls and will not pick up the new Panther tab appearance. This means that Pinstripe will be inconsistent with the Panther UI.</p>
+<p>So faced with these factors I think a preferable way to go is to make a browser tab control that has its own look. With Mozilla’s UI, this is pretty easy to do. I don’t want to copy Safari’s tab controls because there may be legal issues there. Also Apple has not indicated that Safari’s browser tab controls are to be used for anything other than Safari. If they do revise the HIG to include Safari’s browser tabs, I’ll probably rework Pinstripe’s tabs to comply with the guidelines.</p>
+<p>In the meantime I continue to work on the tabs. I’ve made the curves of the tab match the curves of the window so there is a visual link between the tab and the window title bar. <a href="http://kmgerich.com/archive/tabnew1.png">Here is a screenshot</a>. This is still a work in progress – I think the active tab can be made a little brighter and more translucent. If you have comments, please let me know. Thanks for the well thought out post Bill.</p>
+<h2 id="comments">Comments</h2>
+<p>**** on 2003-10-02 15:13:01</p>
+<blockquote>
+<p>I think that the active tab is fine the way it is, translucent may make the tab look like the inactive tabs.
+I agree that the tabs should have their own look and avoid the problems that can come up.</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-10-02 17:03:26</p>
+<blockquote>
+<p>btw - The screenshot of the new tabs look a bit yellow because my Powerbook is having video problems (again).</p>
+</blockquote>
+<p><strong>L. Daudelin</strong> on 2003-10-02 17:44:56</p>
+<blockquote>
+<p>I think that given the limitations of Mozilla, it's perfectly acceptable, and way better than the standard theme.</p>
+<p>So, when are you going to release that Mozilla 1.5 compatible PinStripe?</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-10-02 17:57:40</p>
+<blockquote>
+<p>When I finish it :) Really I can't give a better answer. I've been working on the Firebird theme because the plan was it was going to become default on Mac Firebird for the 0.7 release. That has gotten  <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=204733" rel="nofollow ugc">pushed back till Firebird 0.8</a>. So now I'm trying to adapt my work for the Firebird version of Pinstripe for the Mozilla suite.</p>
+</blockquote>
+<p>**** on 2003-10-03 17:57:26</p>
+<blockquote>
+<p>I wish I hadn't upgraded to 1.5b because I've gotten so attached to your theme...</p>
+</blockquote>
+<p><strong>Joel</strong> on 2003-10-06 21:48:57</p>
+<blockquote>
+<p>The ONLY reason I've stayed with 1.4 :-)</p>
+</blockquote>
+<p><strong>Jon Hicks</strong> on 2003-10-07 10:08:14</p>
+<blockquote>
+<p>Quick question - will your revised tabs open left to right, rather than from the centre? I think Moz and Safari get it right when they open left to right</p>
+</blockquote>
+<p><strong>Kevin</strong> on 2003-10-07 12:11:45</p>
+<blockquote>
+<p>Yes they will open from left to right. That's another feature that set them apart from normal Aqua tabs. And the fact that thay can shrink and expand with the title text...</p>
+<p>check out the latest development version of Pinstripe Firebird to see what the new tab design is like in action.</p>
+<p><a href="http://kmgerich.com/pinstripe/beta.html" rel="nofollow ugc">http://kmgerich.com/pinstripe/beta.html</a></p>
+<p>you'll have to download the latest <a href="http://ftp.mozilla.org/pub/firebird/nightly/latest-0.7/" rel="nofollow ugc">Firebird 0.7RC</a> to use the theme.</p>
+</blockquote>
+<p><strong>Sosurim</strong> on 2003-11-28 04:36:30</p>
+<blockquote>
+<p>Just wanted to add my thank you for this great theme somewhere. It just feels like having a new browser again... Finally Mozilla has become a Mac application. Great Stuff!</p>
+</blockquote>
+
+
+		</main>
+
+		<footer>
+			<p>© 2025</p>
+		</footer>
+
+		<!-- This page `/posts/2003/10/01/pinstripe-tabs-part-2/` was built on 2025-05-26T18:39:57.800Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
