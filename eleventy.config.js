@@ -3,7 +3,6 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import { JSDOM } from "jsdom";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -97,12 +96,6 @@ export default async function(eleventyConfig) {
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 
-	eleventyConfig.addFilter("extractFirstImage", content => {
-		if (!content) return null;
-		let dom = new JSDOM(content);
-		let img = dom.window.document.querySelector("img");
-		return img?.src || null;
-	});
 
 	
 
@@ -120,13 +113,8 @@ export default async function(eleventyConfig) {
 		return (new Date()).getFullYear();
 	});
 
-	eleventyConfig.addCollection("post", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("content/posts/**/*.md").map(item => {
-		const dom = new JSDOM(item.templateContent || "");
-		const img = dom.window.document.querySelector("img");
-		item.data.extractedThumbnail = img?.src || null;
-		return item;
-		});
+	eleventyConfig.addCollection("posts", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("content/posts/**/*.md");
 	});
 
 	eleventyConfig.addPassthroughCopy("media");
