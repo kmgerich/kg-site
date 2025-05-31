@@ -40,4 +40,11 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("sortAlphabetically", strings =>
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
+
+	eleventyConfig.addFilter("regexMatch", (str, pattern) => {
+		if (!str) return null;
+		const regex = new RegExp(pattern, 'i');
+		const match = str.match(regex);
+		return match;
+	});
 };

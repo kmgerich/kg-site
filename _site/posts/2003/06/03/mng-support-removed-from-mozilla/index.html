@@ -7,30 +7,32 @@
 		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
 		<meta name="generator" content="Eleventy v3.0.0">
-		<!-- FlexMasonry external CSS -->
-		<link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
 		
-		<link rel="stylesheet" href="/dist/K9hp71GZ-9.css">
+		<link rel="stylesheet" href="/dist/Grga5rmE-Z.css">
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">Kevin Makes Stuff</a>
-			<nav>
-				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-				<ul class="nav">
-					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/archive/">Archive</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
-					<li class="nav-item"><a href="/feed.xml">Feed</a></li>
-				</ul>
-			</nav>
-		</header>
+		<div class="layout-container">
+			<aside class="sidebar">
+				<header class="sidebar-header">
+					<a href="/" class="home-link">Kevin Makes Stuff</a>
+				</header>
+				<nav class="sidebar-nav">
+					<h2 class="visually-hidden" id="navigation-menu">Navigation menu</h2>
+					<ul class="nav">
+						<li class="nav-item"><a href="/">Home</a></li>
+						<li class="nav-item"><a href="/archive/">Archive</a></li>
+						<li class="nav-item"><a href="/about/">About</a></li>
+						<li class="nav-item"><a href="/feed.xml">Feed</a></li>
+					</ul>
+				</nav>
+			</aside>
 
-		<main id="skip">
-			<h1 id="mng-support-removed-from-mozilla">MNG support removed from Mozilla</h1>
-			
+			<div class="main-content">
+				<main id="skip">
+					<h1 id="mng-support-removed-from-mozilla">MNG support removed from Mozilla</h1>
+					
 <p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fposts%2F2003%2F06%2F03%2Fmng-support-removed-from-mozilla%2Fthrobber-gk1u75pFNj65.png&width=100&format=avif&via=transform 100w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fposts%2F2003%2F06%2F03%2Fmng-support-removed-from-mozilla%2Fthrobber-gk1u75pFNj65.png&width=100&format=webp&via=transform 100w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fposts%2F2003%2F06%2F03%2Fmng-support-removed-from-mozilla%2Fthrobber-gk1u75pFNj65.png&width=100&format=png&via=transform" alt="throbber.png" width="100" height="32"></picture><br>
 Support for the MNG file format was <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=195280">removed from Mozilla today</a>. <a href="http://www.libpng.org/pub/mng/">Multiple-image Network Graphics</a> is like a GIF animation but with alpha-transparency so it can blend in with images among other neat <a href="http://www.libpng.org/pub/mng/#history">features</a>. Look at the image above with the loading animation blending in with the Aqua tab. This looks pretty awful when in GIF format. The thing is that there is no alternative to MNG in Mozilla, so I will have to go back to GIF animations or find some other way of doing an animated icon with alpha-transparency. Any suggestions?</p>
 <p>Update: Please vote for <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=18574">Bug 18574</a> if you’d like to see MNG support restored to Mozilla. But please don’t use the bug for advocacy – that’s what the <a href="http://www.mozillazine.org">MozillaZine</a> forums and your blogs are for. Thanks!</p>
@@ -61,11 +63,13 @@ Support for the MNG file format was <a href="http://bugzilla.mozilla.org/show_bu
 </blockquote>
 
 
-		</main>
+				</main>
 
-		<footer>
-			<p>© 2025</p>
-		</footer>
+				<footer>
+					<p>© 2025</p>
+				</footer>
+			</div>
+		</div>
 		
 		
 	</body>

@@ -7,30 +7,32 @@
 		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
 		<meta name="generator" content="Eleventy v3.0.0">
-		<!-- FlexMasonry external CSS -->
-		<link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
 		
-		<link rel="stylesheet" href="/dist/K9hp71GZ-9.css">
+		<link rel="stylesheet" href="/dist/Grga5rmE-Z.css">
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">Kevin Makes Stuff</a>
-			<nav>
-				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-				<ul class="nav">
-					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/archive/">Archive</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
-					<li class="nav-item"><a href="/feed.xml">Feed</a></li>
-				</ul>
-			</nav>
-		</header>
+		<div class="layout-container">
+			<aside class="sidebar">
+				<header class="sidebar-header">
+					<a href="/" class="home-link">Kevin Makes Stuff</a>
+				</header>
+				<nav class="sidebar-nav">
+					<h2 class="visually-hidden" id="navigation-menu">Navigation menu</h2>
+					<ul class="nav">
+						<li class="nav-item"><a href="/">Home</a></li>
+						<li class="nav-item"><a href="/archive/">Archive</a></li>
+						<li class="nav-item"><a href="/about/">About</a></li>
+						<li class="nav-item"><a href="/feed.xml">Feed</a></li>
+					</ul>
+				</nav>
+			</aside>
 
-		<main id="skip">
-			<h1 id="pretty-widgets">Pretty Widgets</h1>
-			
+			<div class="main-content">
+				<main id="skip">
+					<h1 id="pretty-widgets">Pretty Widgets</h1>
+					
 <p>Inspired by <a href="http://hicksdesign.co.uk/journal/551/native-looking-firefox-os-x-widgets">Jon’s attempt</a> to make Mac Firefox HTML form widgets a little easier on the eyes, I’ve taken a shot at making a set of widget styles that blends with Mac Firefox. It has focus rings too!</p>
 <p><img src="http://kmgerich.com/archive/archive/images/widgets.png" alt="widgets.png"></p>
 <p>Instructions: <a href="/archive/temp/userContent.css">Download the userContent.css file</a> and copy it to your ~/Library/Application Support/Firefox/Profiles/(profile name)/chrome folder. Or add the code within to your existing userContent.css file. It’ll look best on a recent Firefox branch build.</p>
@@ -268,11 +270,13 @@ color: black !important;</p>
 </blockquote>
 
 
-		</main>
+				</main>
 
-		<footer>
-			<p>© 2025</p>
-		</footer>
+				<footer>
+					<p>© 2025</p>
+				</footer>
+			</div>
+		</div>
 		
 		
 	</body>

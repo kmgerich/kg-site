@@ -7,30 +7,32 @@
 		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
 		<meta name="generator" content="Eleventy v3.0.0">
-		<!-- FlexMasonry external CSS -->
-		<link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
 		
-		<link rel="stylesheet" href="/dist/K9hp71GZ-9.css">
+		<link rel="stylesheet" href="/dist/Grga5rmE-Z.css">
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">Kevin Makes Stuff</a>
-			<nav>
-				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-				<ul class="nav">
-					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/archive/">Archive</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
-					<li class="nav-item"><a href="/feed.xml">Feed</a></li>
-				</ul>
-			</nav>
-		</header>
+		<div class="layout-container">
+			<aside class="sidebar">
+				<header class="sidebar-header">
+					<a href="/" class="home-link">Kevin Makes Stuff</a>
+				</header>
+				<nav class="sidebar-nav">
+					<h2 class="visually-hidden" id="navigation-menu">Navigation menu</h2>
+					<ul class="nav">
+						<li class="nav-item"><a href="/">Home</a></li>
+						<li class="nav-item"><a href="/archive/">Archive</a></li>
+						<li class="nav-item"><a href="/about/">About</a></li>
+						<li class="nav-item"><a href="/feed.xml">Feed</a></li>
+					</ul>
+				</nav>
+			</aside>
 
-		<main id="skip">
-			<h1 id="pretty-widgets-part-3">Pretty Widgets, Part 3</h1>
-			
+			<div class="main-content">
+				<main id="skip">
+					<h1 id="pretty-widgets-part-3">Pretty Widgets, Part 3</h1>
+					
 <p><picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fposts%2F2005%2F01%2F23%2Fpretty-widgets-part-3%2Fwidgets-three-fRB2vhIaE54T.png&width=182&format=avif&via=transform 182w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fposts%2F2005%2F01%2F23%2Fpretty-widgets-part-3%2Fwidgets-three-fRB2vhIaE54T.png&width=182&format=webp&via=transform 182w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fposts%2F2005%2F01%2F23%2Fpretty-widgets-part-3%2Fwidgets-three-fRB2vhIaE54T.png&width=182&format=png&via=transform" alt="widgets-three.png" width="182" height="151"></picture>This is a third try at making Mac Firefox’s primitive-looking HTML widgets work with the design of Pinstripe. This time I took care to make the styles play well with others. For instance these styles won’t override CSS set by a web page in most cases.</p>
 <p>You’ll note that the styles have moved into forms.css from platform-forms.css. That’s because platform-forms.css doesn’t seem to exist in recent trunk builds of Firefox. If you’ve used a previous version of these widgets, you should remove them before you apply these files or start with a fresh new copy of Firefox.</p>
 <p>There are bugs here, the most prominent is the inside of the URLbar that gets a focus ring when it’s not supposed to. Any ideas? I hope you’ll help me test these styles and let me know of any bugs.</p>
@@ -129,11 +131,13 @@ If you want blue selected radio buttons and checked boxes, try my package.</p>
 </blockquote>
 
 
-		</main>
+				</main>
 
-		<footer>
-			<p>© 2025</p>
-		</footer>
+				<footer>
+					<p>© 2025</p>
+				</footer>
+			</div>
+		</div>
 		
 		
 	</body>

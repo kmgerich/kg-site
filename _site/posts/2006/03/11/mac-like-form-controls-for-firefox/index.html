@@ -7,30 +7,32 @@
 		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
 		<meta name="generator" content="Eleventy v3.0.0">
-		<!-- FlexMasonry external CSS -->
-		<link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
 		
-		<link rel="stylesheet" href="/dist/K9hp71GZ-9.css">
+		<link rel="stylesheet" href="/dist/Grga5rmE-Z.css">
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">Kevin Makes Stuff</a>
-			<nav>
-				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-				<ul class="nav">
-					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/archive/">Archive</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
-					<li class="nav-item"><a href="/feed.xml">Feed</a></li>
-				</ul>
-			</nav>
-		</header>
+		<div class="layout-container">
+			<aside class="sidebar">
+				<header class="sidebar-header">
+					<a href="/" class="home-link">Kevin Makes Stuff</a>
+				</header>
+				<nav class="sidebar-nav">
+					<h2 class="visually-hidden" id="navigation-menu">Navigation menu</h2>
+					<ul class="nav">
+						<li class="nav-item"><a href="/">Home</a></li>
+						<li class="nav-item"><a href="/archive/">Archive</a></li>
+						<li class="nav-item"><a href="/about/">About</a></li>
+						<li class="nav-item"><a href="/feed.xml">Feed</a></li>
+					</ul>
+				</nav>
+			</aside>
 
-		<main id="skip">
-			<h1 id="mac-like-form-controls-for-firefox">Mac-like Form Controls for Firefox</h1>
-			
+			<div class="main-content">
+				<main id="skip">
+					<h1 id="mac-like-form-controls-for-firefox">Mac-like Form Controls for Firefox</h1>
+					
 <p><img src="content/archive/images/select-variations.png" alt="select controls with various CSS rules applied">The Mac-like form controls seen in Safari and Camino look nice, but tend to ignore CSS styling. I wanted to see if I could bring more flexible form widget styles to Firefox, while staying close to a native look as seen in <a href="http://www.caminobrowser.org">Camino</a>.</p>
 <p>Single select boxes were the most problematic. How do you fuse the aqua pill-like control with a CSS background or border color? I think the answer is: You don’t. I decided to abandon Aqua for my own hand-rolled look which hopefully is Mac-like enough to blend with the other controls, but flexible enough to look good when CSS styles are applied.</p>
 <p>The look for the select box is created with semi-transparent PNG images that allow the background color to show through. You’ll notice the widget also respects your choice of either the Blue or Graphite OS theme. <a href="http://kmgerich.com/downloads/ff-kmgerich-2006-03-11.dmg.gz">Here’s a build</a> off the Firefox 1.8 branch with the new Mac widget styles. Check it out and let me know what you think.</p>
@@ -147,11 +149,13 @@ a href=&quot;http://education.sumali.com/hs-diploma-online.html&quot; rel=&quot;
 </blockquote>
 
 
-		</main>
+				</main>
 
-		<footer>
-			<p>© 2025</p>
-		</footer>
+				<footer>
+					<p>© 2025</p>
+				</footer>
+			</div>
+		</div>
 		
 		
 	</body>
