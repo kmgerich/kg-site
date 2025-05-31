@@ -7,6 +7,8 @@
 		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
 		<meta name="generator" content="Eleventy v3.0.0">
+		<!-- FlexMasonry external CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
 		
 		<link rel="stylesheet" href="/dist/rBrClB5iay.css">
 	</head>
@@ -36,21 +38,41 @@
 
 
 
-<ol reversed="" class="postlist">
+<ul reversed="" class="postlist flexmasonry" data-columns="2">
 	<li class="postlist-item">
-		<a href="/posts/art/it-was-a-fun-saturday-drawing-with-urbansketchersr/" class="postlist-link">It was a fun Saturday drawing with @urbansketchersrhodeisland and sharing artwork #copicmarkers</a>
-		<time class="postlist-date" datetime="2025-03-10">March 2025</time>
+    <article>
+      
+      
+		  <a href="/posts/art/it-was-a-fun-saturday-drawing-with-urbansketchersr/" class="postlist-link">It was a fun Saturday drawing with @urbansketchersrhodeisland and sharing artwork #copicmarkers</a>
+		  <time class="postlist-date" datetime="2025-03-10">March 2025</time>
+    </article>
 	</li>
 	<li class="postlist-item">
-		<a href="/posts/art/great-day-drawing-with-uskboston-in-bplboston/" class="postlist-link">Great day drawing with @uskboston in @bplboston</a>
-		<time class="postlist-date" datetime="2025-01-26">January 2025</time>
+    <article>
+      
+      
+		  <a href="/posts/art/great-day-drawing-with-uskboston-in-bplboston/" class="postlist-link">Great day drawing with @uskboston in @bplboston</a>
+		  <time class="postlist-date" datetime="2025-01-26">January 2025</time>
+    </article>
 	</li>
 	<li class="postlist-item">
-		<a href="/posts/art/sketch-from-last-weekend-with-uskboston/" class="postlist-link">Sketch from last weekend with @uskboston</a>
-		<time class="postlist-date" datetime="2024-12-21">December 2024</time>
+    <article>
+      
+      
+		  <a href="/posts/art/sketch-from-last-weekend-with-uskboston/" class="postlist-link">Sketch from last weekend with @uskboston</a>
+		  <time class="postlist-date" datetime="2024-12-21">December 2024</time>
+    </article>
 	</li>
-</ol>
+</ul>
 
+<script src="https://unpkg.com/flexmasonry/dist/flexmasonry.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    FlexMasonry.init('.flexmasonry', {
+      responsive: true
+    });
+  });
+</script>
 
 
 

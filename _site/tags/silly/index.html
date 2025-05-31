@@ -7,6 +7,8 @@
 		<meta name="description" content="This is the website of Kevin Gerich, writing about making technology, art and life.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Kevin Makes Stuff">
 		<meta name="generator" content="Eleventy v3.0.0">
+		<!-- FlexMasonry external CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
 		
 		<link rel="stylesheet" href="/dist/or4-OWvtpz.css">
 	</head>
@@ -33,17 +35,33 @@
 
 
 
-<ol reversed="" class="postlist">
+<ul reversed="" class="postlist flexmasonry" data-columns="2">
 	<li class="postlist-item">
-		<a href="/posts/2004/09/15/silliness-is-its-own-reward-updated-with-extra-mirth/" class="postlist-link">Silliness is its own reward (Updated with extra mirth!)</a>
-		<time class="postlist-date" datetime="2004-09-15">September 2004</time>
+    <article>
+      
+      
+		  <a href="/posts/2004/09/15/silliness-is-its-own-reward-updated-with-extra-mirth/" class="postlist-link">Silliness is its own reward (Updated with extra mirth!)</a>
+		  <time class="postlist-date" datetime="2004-09-15">September 2004</time>
+    </article>
 	</li>
 	<li class="postlist-item">
-		<a href="/posts/2003/04/01/new-mozilla-theme/" class="postlist-link">New Mozilla Theme!</a>
-		<time class="postlist-date" datetime="2003-04-01">April 2003</time>
+    <article>
+      
+      
+		  <a href="/posts/2003/04/01/new-mozilla-theme/" class="postlist-link">New Mozilla Theme!</a>
+		  <time class="postlist-date" datetime="2003-04-01">April 2003</time>
+    </article>
 	</li>
-</ol>
+</ul>
 
+<script src="https://unpkg.com/flexmasonry/dist/flexmasonry.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    FlexMasonry.init('.flexmasonry', {
+      responsive: true
+    });
+  });
+</script>
 
 <p>See <a href="/tags/">all tags</a>.</p>
 
