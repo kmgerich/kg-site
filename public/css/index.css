@@ -458,6 +458,7 @@ main :first-child {
 }
 .art-grid-item {
 	display: block;
+	min-width: 0; /* let the grid track shrink below the image's intrinsic width */
 	text-decoration: none;
 	color: inherit;
 }
