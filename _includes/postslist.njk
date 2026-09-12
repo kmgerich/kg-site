@@ -1,5 +1,5 @@
 {#- A plain, editorial list of posts: title, date, and (if present) a dek/excerpt.
-    Used for the homepage writing feed and the tag index pages. #}
+    Used for the homepage Journal feed and the tag index pages. #}
 <ul class="essay-list">
 {%- for post in postslist | reverse %}
 	<li class="essay-list-item{% if post.url == url %} essay-list-item-active{% endif %}">

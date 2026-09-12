@@ -53,8 +53,8 @@ export default async function(eleventyConfig) {
 		stylesheet: "pretty-atom-feed.xsl",
 		// No eleventyNavigation here — the feed link lives in the footer, not the top nav.
 		collection: {
-			// The feed follows the new essay writing, not the art gallery or the archive.
-			name: "writing",
+			// The feed follows the Journal, not the art gallery or the archive.
+			name: "journal",
 			limit: 10,
 		},
 		metadata: {
@@ -115,10 +115,10 @@ export default async function(eleventyConfig) {
 		return collectionApi.getFilteredByGlob("content/posts/**/*.md");
 	});
 
-	// New essay writing: AI, art, creativity, technology, expression.
+	// The Journal: AI, art, creativity, technology, expression.
 	// Powers the homepage and the RSS feed.
-	eleventyConfig.addCollection("writing", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("content/writing/**/*.md");
+	eleventyConfig.addCollection("journal", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("content/journal/**/*.md");
 	});
 
 	// The art/sketchbook gallery (originally imported from Instagram).

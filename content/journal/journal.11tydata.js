@@ -1,6 +1,6 @@
 export default {
 	tags: [
-		"writing"
+		"journal"
 	],
 	layout: "layouts/post.njk",
 };
