@@ -17,7 +17,7 @@ tags:
 ---
 A look at the history of a BBC News article provided by my [RSS aggregator](http://flock.sourceforge.net). Each of the three items in the image below link to the [same article](http://news.bbc.co.uk/1/hi/world/americas/3640459.stm).
 
-![bbcheads.png](http://kmgerich.com/archive/archive/images/bbcheads.png)
+![bbcheads.png (image no longer available)](/media/placeholder-missing.png)
 
 Update: Josh pointed out that the headline changed \*again\*. Now it reads “US chides Spain for Iraq pull-out”. Up next: “US gently cautions Spain not to track mud across its nice clean floor”.
 

@@ -21,7 +21,7 @@ tags:
 ---
 Inspired by [Jon’s attempt](http://hicksdesign.co.uk/journal/551/native-looking-firefox-os-x-widgets) to make Mac Firefox HTML form widgets a little easier on the eyes, I’ve taken a shot at making a set of widget styles that blends with Mac Firefox. It has focus rings too!
 
-![widgets.png](http://kmgerich.com/archive/archive/images/widgets.png)
+![widgets.png (image no longer available)](/media/placeholder-missing.png)
 
 Instructions: [Download the userContent.css file](/archive/temp/userContent.css) and copy it to your ~/Library/Application Support/Firefox/Profiles/(profile name)/chrome folder. Or add the code within to your existing userContent.css file. It’ll look best on a recent Firefox branch build.
 

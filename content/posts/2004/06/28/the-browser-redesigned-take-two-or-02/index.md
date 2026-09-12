@@ -34,7 +34,7 @@ After I had time to digest the more intelligent criticism I sat down with my rec
 -   They needed to be larger. They now fill almost the whole 24×24 space including shadow. This is inline with Microsoft’s toolbar icons and it makes them much nicer to look at. The small icons also make more efficient use of space.
 -   Moved development to Illustrator for a smoother (I think fuzzier) XP look. Initially I did them strictly in Photoshop because Illustrator tends to give exported bitmaps a fuzzy look. I was using Paths in Photoshop, but it is still sharper. A lot of people tend to use vector artworks smooth resizing abilities as kind of a crutch I think, ending up with vague smeary icons, especially at smaller sizes. I settled for a compromise between a lot of tweaking to get a more crisp look, and the ability to resize later. There are other problems with getting cartoony designed icons to scale well, but its a trade off to get a more XP consistent look.
 
-![home scaled](http://www.noved.org/~stephen/public_files/screenshots/home_scaled.png)
+![home scaled (image no longer available)](/media/placeholder-missing.png)
 
 -   Made them bolder and have more depth. More severe gradients, darker and softer outlines, and drop shadows. They are slightly more bold than anything found in Windows by default, but this is where “distinct style” comes into play. I even have subtle highlights on some of the icons. Not traditionally Windows, but I have seen it done and nothing forbids it. It also gives them a more solid look I think.
 -   “Fixed” the **Reload** icon to be much more dynamic, and rounder 😉 Since very few people like that icon apparently.

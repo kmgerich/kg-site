@@ -19,7 +19,7 @@ tags:
 ---
 I just checked in new revisions of the back, forward, reload and stop icons for Mac Firefox by icon wizard Stephen Horlander. These new buttons attempt to address the critics of the previous set, and they share their shapes with the Windows Firefox theme. We went with a more colorful toolbar this time instead of making the nav icons all blue. This will probably be the final major change before Firefox 1.0 is released.
 
-![newernavicons.png](http://kmgerich.com/archive/archive/images/newernavicons.png)
+![newernavicons.png (image no longer available)](/media/placeholder-missing.png)
 
 \[ Update: [Download the latest Firefox nightly build](http://ftp34.newaol.com/pub/mozilla.org/firefox/nightly/latest-0.9/Firefox-mac.dmg.gz) to see the new icons \]
 
