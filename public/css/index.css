@@ -7,8 +7,8 @@
 
 /* Theme colors — warm & editorial */
 :root {
-	--color-bg: #faf7f1;
-	--color-bg-raised: #ffffff;
+	--color-bg: #ffffff;
+	--color-bg-raised: #f6f2ea;
 	--color-text: #2b2620;
 	--color-text-muted: #766e60;
 	--color-border: #e7e0d2;
