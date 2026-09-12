@@ -117,7 +117,7 @@ export default async function(eleventyConfig) {
 		return collectionApi.getFilteredByGlob("content/posts/**/*.md");
 	});
 
-	eleventyConfig.addPassthroughCopy("media");
+	eleventyConfig.addPassthroughCopy({ "./content/media/": "/media/" });
 
 
 	// Features to make your build faster (when you need them)
