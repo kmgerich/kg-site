@@ -333,7 +333,8 @@ main :first-child {
 	flex-shrink: 0;
 	width: 3.25rem;
 	color: var(--color-text-muted);
-	font-variant-numeric: tabular-nums;
+	font-family: var(--font-family-monospace);
+	font-size: 0.875rem;
 }
 .archive-list-item a {
 	text-decoration: none;
