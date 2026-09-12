@@ -19,6 +19,10 @@
 	--text-color-link-active: #8f3f24;
 	--text-color-link-visited: #8a6a51;
 
+	/* Only ever seen in local preview — drafts are excluded from real builds. */
+	--color-draft-bg: #fdecea;
+	--color-draft-text: #b3261e;
+
 	--syntax-tab-size: 2;
 }
 
@@ -35,6 +39,9 @@
 		--text-color-link: #e2895f;
 		--text-color-link-active: #f0a67e;
 		--text-color-link-visited: #c9a98c;
+
+		--color-draft-bg: #4a2320;
+		--color-draft-text: #ff8a80;
 	}
 }
 
@@ -344,6 +351,26 @@ main :first-child {
 .post-tag:hover {
 	border-color: var(--text-color-link);
 	color: var(--text-color-link) !important;
+}
+
+.draft-badge {
+	display: inline-block;
+	padding: 0.0625rem 0.5rem;
+	border-radius: 999px;
+	background: var(--color-draft-bg);
+	color: var(--color-draft-text);
+	font-family: var(--font-family-sans);
+	font-size: 0.7rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	vertical-align: middle;
+}
+.essay-header h1 .draft-badge {
+	font-size: 0.9rem;
+	vertical-align: middle;
+	position: relative;
+	top: -0.2em;
 }
 
 /* Post metadata row (date + tags) */

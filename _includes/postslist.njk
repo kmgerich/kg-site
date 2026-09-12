@@ -4,7 +4,7 @@
 {%- for post in postslist | reverse %}
 	<li class="essay-list-item{% if post.url == url %} essay-list-item-active{% endif %}">
 		<a href="{{ post.url }}" class="essay-list-link">
-			<span class="essay-list-title">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</span>
+			<span class="essay-list-title">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}{% if post.data.draft %} <span class="draft-badge">Draft</span>{% endif %}</span>
 			{%- if post.data.description %}
 			<span class="essay-list-dek">{{ post.data.description }}</span>
 			{%- endif %}
