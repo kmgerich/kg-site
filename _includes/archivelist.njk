@@ -1,9 +1,9 @@
-{#- A compact, dense index for the old archive: just date + title. #}
+{#- A compact, dense index for the old archive: just title + date. #}
 <ul class="archive-list">
 {%- for post in postslist | reverse %}
 	<li class="archive-list-item">
-		<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy-LL-dd") }}</time>
 		<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+		<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy-LL-dd") }}</time>
 	</li>
 {%- endfor %}
 </ul>
