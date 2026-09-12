@@ -51,12 +51,7 @@ export default async function(eleventyConfig) {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed.xml",
 		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 4
-			}
-		},
+		// No eleventyNavigation here — the feed link lives in the footer, not the top nav.
 		collection: {
 			// The feed follows the new essay writing, not the art gallery or the archive.
 			name: "writing",
