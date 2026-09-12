@@ -51,4 +51,21 @@ export default function(eleventyConfig) {
 		const match = str.match(regex);
 		return match;
 	});
+
+	// Groups a collection (already in the desired display order) into
+	// [{ year, posts }, ...], splitting whenever the year changes.
+	// Used for the year-headed archive index.
+	eleventyConfig.addFilter("groupByYear", (posts) => {
+		const groups = [];
+		let currentGroup = null;
+		for (const post of (posts || [])) {
+			const year = DateTime.fromJSDate(post.date, { zone: "utc" }).year;
+			if (!currentGroup || currentGroup.year !== year) {
+				currentGroup = { year, posts: [] };
+				groups.push(currentGroup);
+			}
+			currentGroup.posts.push(post);
+		}
+		return groups;
+	});
 };

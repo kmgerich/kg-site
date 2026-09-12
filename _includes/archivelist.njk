@@ -1,9 +1,14 @@
-{#- A compact, dense index for the old archive: just title + date. #}
+{#- Year-headed index for the old archive (inspired by hicks.design/journal/archive):
+    a year heading followed by a dense "date  title" list, newest first. #}
+{%- set yearGroups = postslist | reverse | groupByYear %}
+{%- for group in yearGroups %}
+<h2 class="archive-year">{{ group.year }}</h2>
 <ul class="archive-list">
-{%- for post in postslist | reverse %}
+	{%- for post in group.posts %}
 	<li class="archive-list-item">
+		<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLL dd") }}</time>
 		<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-		<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy-LL-dd") }}</time>
 	</li>
-{%- endfor %}
+	{%- endfor %}
 </ul>
+{%- endfor %}
