@@ -1,5 +1,5 @@
 ---
-title: I&#039;m a moron
+title: I’m a moron
 authors:
   - name: Kevin
     url: https://www.kmgerich.com

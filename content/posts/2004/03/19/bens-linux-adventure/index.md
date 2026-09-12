@@ -1,5 +1,5 @@
 ---
-title: Ben&#039;s Linux Adventure
+title: Ben’s Linux Adventure
 authors:
   - name: Kevin
     url: https://www.kmgerich.com

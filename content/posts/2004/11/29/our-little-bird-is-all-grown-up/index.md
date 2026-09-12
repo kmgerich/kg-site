@@ -1,5 +1,5 @@
 ---
-title: Our little &#039;bird is all grown up
+title: Our little ’bird is all grown up
 authors:
   - name: Kevin
     url: https://www.kmgerich.com

@@ -1,5 +1,5 @@
 ---
-title: Opus&#039; Return
+title: Opus’ Return
 authors:
   - name: Kevin
     url: https://www.kmgerich.com
