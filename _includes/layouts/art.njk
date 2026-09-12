@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+---
+<article class="art-piece">
+	<p class="art-piece-eyebrow"><a href="/art/">← Art</a></p>
+
+	<div class="art-piece-content">
+		{{ content | safe }}
+	</div>
+
+	<footer class="art-piece-footer">
+		<h1>{{ title }}</h1>
+		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+	</footer>
+</article>
+
+{%- if collections.art %}
+{%- set previousPiece = collections.art | getPreviousCollectionItem %}
+{%- set nextPiece = collections.art | getNextCollectionItem %}
+{%- if nextPiece or previousPiece %}
+<ul class="links-nextprev">
+	{%- if previousPiece %}<li class="links-nextprev-prev">← Previous<br> <a href="{{ previousPiece.url }}">{{ previousPiece.data.title }}</a></li>{% endif %}
+	{%- if nextPiece %}<li class="links-nextprev-next">Next →<br><a href="{{ nextPiece.url }}">{{ nextPiece.data.title }}</a></li>{% endif %}
+</ul>
+{%- endif %}
+{%- endif %}

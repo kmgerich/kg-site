@@ -1,10 +1,7 @@
----js
-const eleventyNavigation = {
-	key: "Archive",
-	order: 2
-};
----
-<h1>Archive</h1>
+<div class="page-intro">
+	<h1>Archive</h1>
+	<p class="page-intro-dek">The old Firefox/Pinstripe-era blog (2002–2006), preserved at its original URLs.</p>
+</div>
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+{% set postslist = collections.archive %}
+{% include "archivelist.njk" %}

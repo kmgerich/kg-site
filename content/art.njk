@@ -1,0 +1,13 @@
+---js
+const eleventyNavigation = {
+	key: "Art",
+	order: 2
+};
+---
+<div class="page-intro">
+	<h1>Art</h1>
+	<p class="page-intro-dek">Sketches and paintings, mostly from urban sketching sessions around Boston.</p>
+</div>
+
+{% set artlist = collections.art %}
+{% include "artgrid.njk" %}

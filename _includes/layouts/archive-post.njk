@@ -5,7 +5,9 @@ layout: layouts/base.njk
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 
-<article class="essay">
+<article class="archive-post">
+	<p class="archive-post-banner">From the archive — originally published {{ page.date | readableDate }} on the old Firefox/Pinstripe-era blog.</p>
+
 	<header class="essay-header">
 		<h1>{{ title }}</h1>
 		<ul class="post-metadata">
@@ -22,9 +24,9 @@ layout: layouts/base.njk
 	</div>
 </article>
 
-{%- if collections.writing %}
-{%- set previousPost = collections.writing | getPreviousCollectionItem %}
-{%- set nextPost = collections.writing | getNextCollectionItem %}
+{%- if collections.archive %}
+{%- set previousPost = collections.archive | getPreviousCollectionItem %}
+{%- set nextPost = collections.archive | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
 <ul class="links-nextprev">
 	{%- if previousPost %}<li class="links-nextprev-prev">← Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}

@@ -1,20 +1,15 @@
-
-<div class="postlist-masonry">
+{#- A plain, editorial list of posts: title, date, and (if present) a dek/excerpt.
+    Used for the homepage writing feed and the tag index pages. #}
+<ul class="essay-list">
 {%- for post in postslist | reverse %}
-  <article class="postlist-card{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url }}" class="postlist-card-link">
-      {%- set postContent = post.rawInput %}
-      {%- set imageMatch = postContent | regexMatch('!\\[.*?\\]\\((/media/[^)]+)\\)') %}
-      {%- if imageMatch %}
-        <img src="{{ imageMatch[1] }}" alt="Thumbnail for {{ post.data.title }}" class="postlist-card-image" loading="lazy">
-      {%- endif %}
-      <div class="postlist-card-content">
-        <h2 class="postlist-card-title">
-          {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
-        </h2>
-        <time class="postlist-card-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-      </div>
-    </a>
-  </article>
+	<li class="essay-list-item{% if post.url == url %} essay-list-item-active{% endif %}">
+		<a href="{{ post.url }}" class="essay-list-link">
+			<span class="essay-list-title">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</span>
+			{%- if post.data.description %}
+			<span class="essay-list-dek">{{ post.data.description }}</span>
+			{%- endif %}
+			<time class="essay-list-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL d, yyyy") }}</time>
+		</a>
+	</li>
 {%- endfor %}
-</div>
+</ul>

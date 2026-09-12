@@ -58,7 +58,8 @@ export default async function(eleventyConfig) {
 			}
 		},
 		collection: {
-			name: "posts",
+			// The feed follows the new essay writing, not the art gallery or the archive.
+			name: "writing",
 			limit: 10,
 		},
 		metadata: {
@@ -113,8 +114,29 @@ export default async function(eleventyConfig) {
 		return (new Date()).getFullYear();
 	});
 
+	// Everything under content/posts/** (kept as a general-purpose union collection;
+	// most site content pulls from the more specific collections below instead).
 	eleventyConfig.addCollection("posts", function (collectionApi) {
 		return collectionApi.getFilteredByGlob("content/posts/**/*.md");
+	});
+
+	// New essay writing: AI, art, creativity, technology, expression.
+	// Powers the homepage and the RSS feed.
+	eleventyConfig.addCollection("writing", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("content/writing/**/*.md");
+	});
+
+	// The art/sketchbook gallery (originally imported from Instagram).
+	eleventyConfig.addCollection("art", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("content/posts/art/**/*.md");
+	});
+
+	// The old 2002-2006 Firefox/Pinstripe-era blog, imported from WordPress.
+	// Kept at its original URLs (see content/posts/posts.11tydata.js) but
+	// out of primary navigation — see content/archive.njk.
+	eleventyConfig.addCollection("archive", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("content/posts/**/*.md")
+			.filter((item) => item.data.metadata?.type === "wordpress");
 	});
 
 	eleventyConfig.addPassthroughCopy({ "./content/media/": "/media/" });

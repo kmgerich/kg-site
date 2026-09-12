@@ -19,12 +19,8 @@
 		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
 		#}
 
-		{#- Add an arbitrary string to the bundle #}
-		{%- css %}/* This is an arbitrary CSS string added to the bundle */{% endcss %}
 		{#- Add the contents of a file to the bundle #}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		{#- Or you can add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
@@ -35,14 +31,12 @@
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<div class="layout-container">
-			<aside class="sidebar">
-				<header class="sidebar-header">
-					<a href="/" class="home-link">{{ metadata.title }}</a>
-				</header>
+		<header class="site-header">
+			<div class="site-header-inner">
+				<a href="/" class="site-title">{{ metadata.title }}</a>
 
 				{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-				<nav class="sidebar-nav">
+				<nav class="site-nav">
 					<h2 class="visually-hidden">Navigation menu</h2>
 					<ul class="nav">
 					{%- for entry in collections.all | eleventyNavigation %}
@@ -50,19 +44,17 @@
 					{%- endfor %}
 					</ul>
 				</nav>
-			</aside>
-
-			<div class="main-content">
-				<main id="skip">
-					<h1>{{ title }}</h1>
-					{{ content | safe }}
-				</main>
-
-				<footer>
-					<p>© {% currentBuildYear %}</p>
-				</footer>
 			</div>
-		</div>
+		</header>
+
+		<main id="skip">
+			{{ content | safe }}
+		</main>
+
+		<footer class="site-footer">
+			<p><a href="/archive/">Archive</a> · the old Firefox/Pinstripe-era blog, kept around but out of the way</p>
+			<p>© {% currentBuildYear %} {{ metadata.author.name }}</p>
+		</footer>
 		{# kmgerich - commenting out for now to prevent Git file changes #}
 		{# <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} --> #}
 	</body>

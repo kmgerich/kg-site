@@ -1,0 +1,13 @@
+{#- Image-forward gallery grid for the art/sketchbook collection. #}
+<div class="art-grid">
+{%- for piece in artlist | reverse %}
+	<a href="{{ piece.url }}" class="art-grid-item">
+		{%- set pieceContent = piece.rawInput %}
+		{%- set imageMatch = pieceContent | regexMatch('!\\[.*?\\]\\((/media/[^)]+)\\)') %}
+		{%- if imageMatch %}
+		<img src="{{ imageMatch[1] }}" alt="{{ piece.data.title }}" class="art-grid-image" loading="lazy">
+		{%- endif %}
+		<span class="art-grid-title">{{ piece.data.title }}</span>
+	</a>
+{%- endfor %}
+</div>

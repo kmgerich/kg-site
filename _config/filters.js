@@ -33,8 +33,12 @@ export default function(eleventyConfig) {
 		return Object.keys(target);
 	});
 
+	// Named collections (addCollection) and tags share one flat namespace in
+	// Eleventy's `collections` object, so these all need excluding here to
+	// keep them out of the visible tag list/pages, same as "posts" already was.
+	const NON_TAG_COLLECTIONS = ["all", "posts", "writing", "art", "archive"];
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
+		return (tags || []).filter(tag => NON_TAG_COLLECTIONS.indexOf(tag) === -1);
 	});
 
 	eleventyConfig.addFilter("sortAlphabetically", strings =>
