@@ -18,7 +18,7 @@ layout: layouts/base.njk
 		<h1>{{ title }}</h1>
 		{%- set author = authors[0] if authors and authors.length else none %}
 		{%- set byline_name = author.name if author else metadata.author.name %}
-		{%- set byline_avatar = author.avatarUrl if author and author.avatarUrl else metadata.author.email | gravatarUrl(80) %}
+		{%- set byline_avatar = author.avatarUrl if author and author.avatarUrl else metadata.author.email | gravatarUrl(100) %}
 		{%- set byline_date = page.date %}
 		{% include "byline.njk" %}
 	</header>

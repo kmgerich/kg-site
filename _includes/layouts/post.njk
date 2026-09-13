@@ -9,7 +9,7 @@ layout: layouts/base.njk
 	<header class="essay-header">
 		<h1>{{ title }}{% if draft %} <span class="draft-badge">Draft</span>{% endif %}</h1>
 		{%- set byline_name = metadata.author.name %}
-		{%- set byline_avatar = metadata.author.email | gravatarUrl(80) %}
+		{%- set byline_avatar = metadata.author.email | gravatarUrl(100) %}
 		{%- set byline_date = page.date %}
 		{% include "byline.njk" %}
 		{%- if tags | filterTagList | length %}
