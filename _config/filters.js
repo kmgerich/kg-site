@@ -1,6 +1,14 @@
 import { DateTime } from "luxon";
+import { createHash } from "node:crypto";
 
 export default function(eleventyConfig) {
+	// Gravatar's own hashing scheme: trim + lowercase the email, then MD5 it.
+	// https://docs.gravatar.com/api/avatars/images/
+	eleventyConfig.addFilter("gravatarUrl", (email, size) => {
+		const hash = createHash("md5").update((email || "").trim().toLowerCase()).digest("hex");
+		return `https://www.gravatar.com/avatar/${hash}?s=${size || 96}&d=mm`;
+	});
+
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");

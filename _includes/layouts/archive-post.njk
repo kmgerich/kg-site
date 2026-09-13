@@ -6,17 +6,21 @@ layout: layouts/base.njk
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 
 <article class="archive-post">
-	<p class="archive-post-banner">From the <a href="/archive/" class="archive-post-banner-link">archive</a> — originally published {{ page.date | readableDate }} on the old Firefox/Pinstripe-era blog.</p>
+	<p class="archive-post-banner"><strong>From the <a href="/archive/" class="archive-post-banner-link">Archive</a>:</strong> Originally published {{ page.date | readableDate }} on the old Firefox/Pinstripe-era blog.</p>
 
 	<header class="essay-header">
-		<h1>{{ title }}</h1>
 		<ul class="post-metadata">
-			<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
 			{%- for tag in tags | filterTagList %}
 			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-			<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+			<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
 			{%- endfor %}
 		</ul>
+		<h1>{{ title }}</h1>
+		{%- set author = authors[0] if authors and authors.length else none %}
+		{%- set byline_name = author.name if author else metadata.author.name %}
+		{%- set byline_avatar = author.avatarUrl if author and author.avatarUrl else metadata.author.email | gravatarUrl(80) %}
+		{%- set byline_date = page.date %}
+		{% include "byline.njk" %}
 	</header>
 
 	<div class="essay-content">

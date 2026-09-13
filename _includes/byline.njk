@@ -1,0 +1,10 @@
+{#- Author byline: circular avatar + name + date, in the style of
+    platformer.news post bylines. Expects byline_name, byline_avatar,
+    and byline_date to already be set by the including template. #}
+<div class="byline">
+	<img src="{{ byline_avatar }}" alt="{{ byline_name }}" class="byline-avatar" width="40" height="40" loading="lazy">
+	<div class="byline-text">
+		<span class="byline-name">{{ byline_name }}</span>
+		<time class="byline-date" datetime="{{ byline_date | htmlDateString }}">{{ byline_date | readableDate }}</time>
+	</div>
+</div>

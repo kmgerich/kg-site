@@ -8,13 +8,18 @@ layout: layouts/base.njk
 <article class="essay">
 	<header class="essay-header">
 		<h1>{{ title }}{% if draft %} <span class="draft-badge">Draft</span>{% endif %}</h1>
+		{%- set byline_name = metadata.author.name %}
+		{%- set byline_avatar = metadata.author.email | gravatarUrl(80) %}
+		{%- set byline_date = page.date %}
+		{% include "byline.njk" %}
+		{%- if tags | filterTagList | length %}
 		<ul class="post-metadata">
-			<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
 			{%- for tag in tags | filterTagList %}
 			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-			<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+			<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
 			{%- endfor %}
 		</ul>
+		{%- endif %}
 	</header>
 
 	<div class="essay-content">
