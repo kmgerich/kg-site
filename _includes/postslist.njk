@@ -8,7 +8,7 @@
 			{%- if post.data.description %}
 			<span class="essay-list-dek">{{ post.data.description }}</span>
 			{%- endif %}
-			<time class="essay-list-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("MM-dd-yyyy") }}</time>
+			<time class="essay-list-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLL dd, yyyy") }}</time>
 		</a>
 	</li>
 {%- endfor %}

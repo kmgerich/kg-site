@@ -6,7 +6,7 @@
 <ul class="archive-list">
 	{%- for post in group.posts %}
 	<li class="archive-list-item">
-		<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("MM-dd") }}</time>
+		<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLL dd") }}</time>
 		<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
 	</li>
 	{%- endfor %}
