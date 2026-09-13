@@ -6,12 +6,12 @@ const eleventyNavigation = {
 ---
 <div class="page-intro">
 	<h1>Journal</h1>
-	<p class="page-intro-dek">Notes on AI, art, creativity, technology, and expression.</p>
+	<p class="page-intro-dek">Notes on  creativity, technology, and expression.</p>
 </div>
 
 {% set postslist = collections.journal %}
 {%- if postslist.length %}
 {% include "postslist.njk" %}
 {%- else %}
-<p class="empty-state">Nothing published here yet — new essays on AI, art, creativity, and technology are coming soon. In the meantime, take a look at the <a href="/art/">art</a>.</p>
+<p class="empty-state">Nothing published here yet — New essays on creativity, and technology are coming soon. In the meantime, take a look at the <a href="/art/">art</a>.</p>
 {%- endif %}
