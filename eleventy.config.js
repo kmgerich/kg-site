@@ -61,7 +61,7 @@ export default async function(eleventyConfig) {
 			language: "en",
 			title: "Making Marks",
 			subtitle: "This is the website of Kevin Gerich, writing about technology, art, and making things.",
-			base: "https://kmgerich.com/",
+			base: "https://www.makingmarks.net/",
 			author: {
 				name: "Kevin Gerich"
 			}
