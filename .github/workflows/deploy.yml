@@ -31,6 +31,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # eleventy-img only skips reprocessing an image when its target file
+      # already exists in the output dir (_site/img/... etc, content-hashed
+      # by filename) — it has no separate transform cache. Since each
+      # deploy starts on a fresh runner with an empty _site/, every one of
+      # the ~220 images gets reprocessed into avif/webp/jpeg from scratch,
+      # which is the majority of build time (confirmed: ~95s cold vs ~1.5s
+      # when _site/ already has the files). Restoring the previous run's
+      # _site/ before building lets unchanged images get skipped again.
+      # .cache/ (eleventy-fetch's cache for the remote Gravatar images) is
+      # cheap to include too. Keyed per-commit with a prefix fallback so
+      # each run restores the most recent prior cache.
+      - name: Cache built site (eleventy-img output)
+        uses: actions/cache@v4
+        with:
+          path: |
+            _site
+            .cache
+          key: site-build-${{ github.sha }}
+          restore-keys: |
+            site-build-
+
       - name: Build site
         run: npm run build
 
